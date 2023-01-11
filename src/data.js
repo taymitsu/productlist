@@ -14,6 +14,7 @@ const categors = allCategories.reduce((acc, cat) => {
 
 const reduceCategories = Object.keys(categors)
 
+//SHOW COUNT FOR EACH CATEGORY
 const categoryWithCount =  allCategories.reduce ((acc, cat) => {
   if(acc[cat] === undefined) {
     acc[cat] = 1
@@ -23,8 +24,14 @@ const categoryWithCount =  allCategories.reduce ((acc, cat) => {
   return acc //always return accumulator 
 }, {})
 
+//DISPLAY NAME AND COUNT, seperate 
+const nameAndCount = reduceCategories.map(name => {
+  return { name, count: categoryWithCount[name] } //same as { name : name }
+})
+
 export {
   allCategories,
   reduceCategories,
-  categoryWithCount
+  categoryWithCount,
+  nameAndCount
 }
