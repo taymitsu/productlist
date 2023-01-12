@@ -1,6 +1,8 @@
 import './App.css';
-import data, { allCategories, reduceCategories, categoryWithCount, nameAndCount } from './data' //imports data.js file, no extension 
+import data, {reduceCategories} from './data'; //imports data.js file, no extension 
 // NON DEFAULT EXPORTS { } //
+import ProductList from './ProductList';
+import CategoryButtons from './CategoryButtons';
 
 //console.log(data)
 //console.log(allCategories)
@@ -14,31 +16,10 @@ function App() {
       <h1>Product Shop</h1>
       <p>Product Count: { data.length }</p>
       <p>Category Count: { reduceCategories.length }</p>
-      
-      <div>
-        {nameAndCount.map(obj => {
-          return (
-            <button>
-              {obj.name}
-              <span> {obj.count} </span>
-            </button>
-          )
-        })}
-      </div>
 
-      <div>
-        {data.map(obj => {
-          return (
-            <div>
-              <h2>{obj.name}</h2>
-              <p>{obj.description}</p>
-              <p>{obj.price}</p>
-              <small>Category: {obj.category} Rating: {obj.rating}</small>
-            </div>
-          )
-        })}
-      </div>
-
+        <CategoryButtons />
+        <ProductList />
+  
     </div>
   );
 }
