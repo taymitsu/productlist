@@ -4,7 +4,7 @@ import './ProductList.css';
 
 function ProductList() {
   return (
-    <div classname="ProductList">
+    <div className="ProductList">
       {data.map(obj => {
         return (
           <div>
