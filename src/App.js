@@ -1,4 +1,6 @@
+import React from 'react';
 import './App.css';
+
 import data, {reduceCategories} from './data'; //imports data.js file, no extension 
 // NON DEFAULT EXPORTS { } //
 import ProductList from './ProductList';

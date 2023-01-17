@@ -1,8 +1,9 @@
+import React from 'react';
 import data from './data';
 import './ProductList.css';
 
 function ProductList() {
-  return(
+  return (
     <div classname="ProductList">
       {data.map(obj => {
         return (

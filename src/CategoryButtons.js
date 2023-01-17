@@ -1,4 +1,5 @@
 import {nameAndCount} from './data';
+import './CategoryButtons.css'
 
 function CategoryButtons() {
   return(
