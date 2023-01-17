@@ -5,6 +5,7 @@ import data, {reduceCategories} from './data'; //imports data.js file, no extens
 // NON DEFAULT EXPORTS { } //
 import ProductList from './ProductList';
 import CategoryButtons from './CategoryButtons';
+import Header from './Header';
 
 //console.log(data)
 //console.log(allCategories)
@@ -15,9 +16,11 @@ import CategoryButtons from './CategoryButtons';
 function App() {
   return (
     <div className="App">
-      <h1>Product Shop</h1>
-      <p>Product Count: { data.length }</p>
-      <p>Category Count: { reduceCategories.length }</p>
+        <Header 
+        title="Product Shop"
+        productCount={data.length} 
+        categoryCount={reduceCategories.length}
+        />
 
         <CategoryButtons />
         <ProductList />
