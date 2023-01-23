@@ -13,3 +13,8 @@
   background-color: lavenderblush;
   color: black;
 }
+
+button.selected {
+  background-color: black;
+  color: lavenderblush;
+}

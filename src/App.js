@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './App.css';
 
 import data, {reduceCategories} from './data'; //imports data.js file, no extension 
@@ -14,16 +15,25 @@ import Header from './Header';
 //console.log(nameAndCount) //EX: {Name: Movie, count: 6}
 
 function App() {
+
+  const [category, setCategory] = useState('Toys')
+
   return (
     <div className="App">
         <Header 
-        title="Product Shop"
-        productCount={data.length} 
-        categoryCount={reduceCategories.length}
+          title="Product Shop"
+          productCount={data.length} 
+          categoryCount={reduceCategories.length}
         />
 
-        <CategoryButtons />
-        <ProductList />
+        <CategoryButtons 
+          category={category}
+          onClick={newCategory => setCategory(newCategory)}
+        />
+
+        <ProductList 
+          category={category}
+        />
   
     </div>
   );
